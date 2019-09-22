@@ -8,13 +8,12 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
-    new Quote  ( 1,  'tumaa',  'ali',  'never give up' ),
-    new Quote  ( 2,  'tumaa',  'ali',  'never give up' ),
-    new Quote (3, 'tumaa',  'ali', 'never give up' ),
-    new Quote  ( 4, 'tumaa', 'ali', 'never give up'), 
-    new Quote  ( 5, 'tumaa', 'ali',  'never give up' ),
-    new Quote ( 6, 'tumaa',  'ali', 'never give up' ),
-
+    new Quote  ( 1,  'tumaa',  'ali',  'never give up' , new Date(22,9,2019)),
+    new Quote  ( 2,  'tumaa',  'ali',  'never give up' , new Date(22,9,2019)),
+    new Quote (3, 'tumaa',  'ali', 'never give up' , new Date(22,9,2019)),
+    new Quote  ( 4, 'tumaa', 'ali', 'never give up', new Date(22,9,2019)),
+    new Quote  ( 5, 'tumaa', 'ali',  'never give up' , new Date(22,9,2019)),
+    new Quote ( 6, 'tumaa',  'ali', 'never give up' , new Date(22,9,2019)),
   ];
   
 
