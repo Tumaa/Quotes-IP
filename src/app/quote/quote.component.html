@@ -6,7 +6,8 @@
         {{quote.quote}}.
         <br>
         <button (click)='toggleDetails(i)'>Toggle Details</button>
-        <app-quote-detail  *ngIf='quote.showDescription'[quote]='quote' ></app-quote-detail>
+        <app-quote-detail  *ngIf='quote.showDescription'[quote]='quote' (isComplete) = 'completeQuote($event,i)'></app-quote-detail>
+
       </div>
       <p *ngIf='quotes.length > 5'>Your quotes are too many</p>
     </div>
