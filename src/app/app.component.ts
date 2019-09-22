@@ -9,13 +9,5 @@ import { Quote} from './quote';
 })
 export class AppComponent {
 
-  quotes=[
-    {id:1, name:'tumaa', author:'ali', quote:'never give up'},
-    {id:2, name:'tumaa', author:'ali', quote:'never give up'},
-    {id:3, name:'tumaa', author:'ali', quote:'never give up'},
-    {id:4, name:'tumaa', author:'ali', quote:'never give up'},
-    {id:5, name:'tumaa', author:'ali', quote:'never give up'},
-    {id:6, name:'tumaa', author:'ali', quote:'never give up'},
-    
-  ];
+
 }
