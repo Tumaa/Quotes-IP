@@ -8,12 +8,8 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
-    new Quote  ( 1,  'Tumaa',  'Aston Freeman',  'Simplicty is the soul of Efficiency' , new Date(22,9,2019)),
-    new Quote  ( 2,  'Tumaa',  'Aston Freeman',  'Simplicty is the soul of Efficiency' , new Date(22,9,2019)),
-    // new Quote (3, 'Tumaa',  'Aston Freeman', 'Simplicty is the soul of Efficiency' , new Date(22,9,2019)),
-    // new Quote  ( 4, 'Tumaa', 'Aston Freeman', 'Simplicty is the soul of Efficiency', new Date(22,9,2019)),
-    // new Quote  ( 5, 'Tumaa', 'Aston Freeman',  'Simplicty is the soul of Efficiency' , new Date(22,9,2019)),
-    // new Quote ( 6, 'Tumaa',  'Aston Freeman', 'Simplicty is the soul of Efficiency' , new Date(22,9,2019)),
+    new Quote  ( 1,  'Tumaa',  'Racheal',  'The best kiss is the one that has been exchanged a thousand times between the eyes before it reaches the lips' , new Date(22,9,2019),0,0),
+    new Quote (2, 'Tumaa',  'Aston Freeman', 'Simplicty is the soul of Efficiency' , new Date(22,9,2019),0,0),
   ];
 
 toggleDetails(index){
@@ -33,6 +29,12 @@ addNewQuote(quote){
   quote.id = quoteLength+1;
   quote.completeDate = new Date(quote.completeDate)
   this.quotes.push(quote)
+}
+ addVote(index){
+   this.quotes[index].upvote ++;
+ }
+ minusVote(index){
+  this.quotes[index].downvote ++;
 }
 
 constructor() { }

@@ -16,7 +16,6 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
     QuoteDetailComponent,
     StrikethroughDirective,
     DateCountPipe,
- 
     QuoteFormComponent
   ],
   imports: [
