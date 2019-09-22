@@ -10,10 +10,10 @@ export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
     new Quote  ( 1,  'Tumaa',  'Aston Freeman',  'Simplicty is the soul of Efficiency' , new Date(22,9,2019)),
     new Quote  ( 2,  'Tumaa',  'Aston Freeman',  'Simplicty is the soul of Efficiency' , new Date(22,9,2019)),
-    new Quote (3, 'Tumaa',  'Aston Freeman', 'Simplicty is the soul of Efficiency' , new Date(22,9,2019)),
-    new Quote  ( 4, 'Tumaa', 'Aston Freeman', 'Simplicty is the soul of Efficiency', new Date(22,9,2019)),
-    new Quote  ( 5, 'Tumaa', 'Aston Freeman',  'Simplicty is the soul of Efficiency' , new Date(22,9,2019)),
-    new Quote ( 6, 'Tumaa',  'Aston Freeman', 'Simplicty is the soul of Efficiency' , new Date(22,9,2019)),
+    // new Quote (3, 'Tumaa',  'Aston Freeman', 'Simplicty is the soul of Efficiency' , new Date(22,9,2019)),
+    // new Quote  ( 4, 'Tumaa', 'Aston Freeman', 'Simplicty is the soul of Efficiency', new Date(22,9,2019)),
+    // new Quote  ( 5, 'Tumaa', 'Aston Freeman',  'Simplicty is the soul of Efficiency' , new Date(22,9,2019)),
+    // new Quote ( 6, 'Tumaa',  'Aston Freeman', 'Simplicty is the soul of Efficiency' , new Date(22,9,2019)),
   ];
 
 toggleDetails(index){
@@ -27,6 +27,12 @@ deleteQuote(isComplete, index){
       this.quotes.splice(index,1)
     }
   }
+}
+addNewQuote(quote){
+  let quoteLength = this.quotes.length;
+  quote.id = quoteLength+1;
+  quote.completeDate = new Date(quote.completeDate)
+  this.quotes.push(quote)
 }
 
 constructor() { }
