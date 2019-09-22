@@ -7,7 +7,7 @@
         <p appStrikethrough> {{quote.quote}} due on {{quote.completeDate|date|uppercase}}</p>
         <br>
         <button (click)='toggleDetails(i)'>Toggle Details</button>
-        <app-quote-detail  *ngIf='quote.showDescription'[quote]='quote' (isComplete) = 'completeQuote($event,i)'></app-quote-detail>
+        <app-quote-detail  *ngIf='quote.showDescription'[quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
 
       </div>
       <p *ngIf='quotes.length > 5'>Your quotes are too many</p>

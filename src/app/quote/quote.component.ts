@@ -8,21 +8,24 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
-    new Quote  ( 1,  'tumaa',  'ali',  'never give up' , new Date(22,9,2019)),
-    new Quote  ( 2,  'tumaa',  'ali',  'never give up' , new Date(22,9,2019)),
-    new Quote (3, 'tumaa',  'ali', 'never give up' , new Date(22,9,2019)),
-    new Quote  ( 4, 'tumaa', 'ali', 'never give up', new Date(22,9,2019)),
-    new Quote  ( 5, 'tumaa', 'ali',  'never give up' , new Date(22,9,2019)),
-    new Quote ( 6, 'tumaa',  'ali', 'never give up' , new Date(22,9,2019)),
+    new Quote  ( 1,  'Tumaa',  'Aston Freeman',  'Simplicty is the soul of Efficiency' , new Date(22,9,2019)),
+    new Quote  ( 2,  'Tumaa',  'Aston Freeman',  'Simplicty is the soul of Efficiency' , new Date(22,9,2019)),
+    new Quote (3, 'Tumaa',  'Aston Freeman', 'Simplicty is the soul of Efficiency' , new Date(22,9,2019)),
+    new Quote  ( 4, 'Tumaa', 'Aston Freeman', 'Simplicty is the soul of Efficiency', new Date(22,9,2019)),
+    new Quote  ( 5, 'Tumaa', 'Aston Freeman',  'Simplicty is the soul of Efficiency' , new Date(22,9,2019)),
+    new Quote ( 6, 'Tumaa',  'Aston Freeman', 'Simplicty is the soul of Efficiency' , new Date(22,9,2019)),
   ];
-  
 
 toggleDetails(index){
   this.quotes[index].showDescription = !this.quotes[index].showDescription;
 }
-completeQuote(isComplete, index){
+deleteQuote(isComplete, index){
   if (isComplete) {
-    this.quotes.splice(index,1);
+    let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
+
+    if (toDelete){
+      this.quotes.splice(index,1)
+    }
   }
 }
 
