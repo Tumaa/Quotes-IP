@@ -4,5 +4,7 @@
         <br>
        author: {{quote.author}}
        <br>
+       <p>This quote will be complete in {{quote.completeDate|dateCount}} days</p>
+       <br>
        <button (click)= 'quoteComplete(true)'>Complete</button>
 </div>
