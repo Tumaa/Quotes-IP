@@ -16,9 +16,15 @@ export class QuoteComponent implements OnInit {
     new Quote ( 6, 'tumaa',  'ali', 'never give up' ),
 
   ];
-  constructor() { }
+  
 
-  ngOnInit() {
-  }
+toggleDetails(index){
+  this.quotes[index].showDescription = !this.quotes[index].showDescription;
+}
+
+constructor() { }
+
+ngOnInit() {
+}
 
 }
