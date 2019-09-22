@@ -3,11 +3,9 @@
   <hr>
   <div>
       <div *ngFor='let quote of quotes'>
-        {{quote.id}}.
-        {{quote.name}},
-        {{quote.author}},
+        
         {{quote.quote}}.
-
+        <app-quote-detail [quote]='quote'></app-quote-detail>
       </div>
       <p *ngIf='quotes.length > 5'>Your quotes are too many</p>
     </div>
