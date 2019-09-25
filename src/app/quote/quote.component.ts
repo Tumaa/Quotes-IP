@@ -8,8 +8,8 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
-    new Quote  ( 1,  'Tumaa',  'Racheal',  'The best kiss is the one that has been exchanged a thousand times between the eyes before it reaches the lips' , new Date(22,9,2019),0,0),
-    new Quote (2, 'Tumaa',  'Aston Freeman', 'Simplicty is the soul of Efficiency' , new Date(22,9,2019),0,0),
+    new Quote  ( 1,  'Tumaa',  'Racheal',  'The best kiss is the one that has been exchanged a thousand times between the eyes before it reaches the lips' , new Date(2019,8,23),0,0),
+    new Quote (2, 'Tumaa',  'Aston Freeman', 'Simplicty is the soul of Efficiency' , new Date(2019,8,24),0,0),
   ];
 
 toggleDetails(index){
